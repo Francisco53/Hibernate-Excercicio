@@ -8,7 +8,7 @@
 
 ## Distribuição das questões:
 
-Francisco: [Configuração do projeto e o método cadastrar produto]  
+Francisco: [Configuração do projeto, método cadastrar produto e remover produto]  
 Bruno: [3]  
 Josué: [4]  
 Juvenal: [5]
