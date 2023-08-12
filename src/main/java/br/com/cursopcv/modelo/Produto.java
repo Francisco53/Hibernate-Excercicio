@@ -1,6 +1,5 @@
 package br.com.cursopcv.modelo;
 
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,6 +7,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Produto {
+	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cod;
@@ -16,13 +16,8 @@ public class Produto {
     private String descricao;
     private double preco;
 
-
-
-
     public Produto() {
-
     }
-
 
     public Produto(String nome, String descricao, double preco) {
         this.nome = nome;
@@ -62,6 +57,4 @@ public class Produto {
     public void setPreco(double preco) {
         this.preco = preco;
     }
-
-
 }

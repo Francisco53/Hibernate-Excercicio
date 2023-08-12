@@ -29,6 +29,6 @@ public class InclusaoDeProduto {
         repProduto.salvar(prop2);
         repProduto.salvar(prop3);
 
-        repProduto.fecharEntityManager();
+        repProduto.fecharEntityManagerFactory();
     }
 }
