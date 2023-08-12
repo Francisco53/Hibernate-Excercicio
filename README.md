@@ -2,13 +2,13 @@
 
 ## Intregrantes:
 - Francisco
-~~- Bruno~~
+- ~~Bruno~~
 - Josué
 - Juvenal
 
 ## Distribuição das questões:
 
 Francisco: [Configuração do projeto, método cadastrar produto e remover produto]  
-~~Bruno: []~~  
+~~Bruno:~~ []  
 Josué: [Método listar produto]  
 Juvenal: [Método atualizar produto]
