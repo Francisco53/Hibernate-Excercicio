@@ -11,6 +11,8 @@ public class InclusaoDeProduto {
 
         Produto prop = new Produto();
 
+        //Salvando produto
+
         prop.setNome("Panela");
         prop.setDescricao("Panela de Pressão 10 Litros");
         prop.setPreco(56.80);
@@ -28,6 +30,17 @@ public class InclusaoDeProduto {
         repProduto.salvar(prop);
         repProduto.salvar(prop2);
         repProduto.salvar(prop3);
+
+        //Removendo produto
+
+        Produto produto = repProduto.obterPorCod(3L);
+
+        if (produto != null) {
+            System.out.println("Registro da Tabela Produto a ser Deletado");
+            repProduto.remove(produto);
+        } else {
+            System.out.println("Produto não encontrado.");
+        }
 
         repProduto.fecharEntityManager();
     }

@@ -29,6 +29,18 @@ public class RepositorioProduto {
         }
     }
 
+    public void remove(Produto produto){
+
+        em.getTransaction().begin();
+        em.remove(produto);
+        em.getTransaction().commit();
+    }
+
+    public Produto obterPorCod(Long cod) {
+        return em.find(Produto.class, cod);
+    }
+
+
     public void fecharEntityManager() {
         em.close();
     }
