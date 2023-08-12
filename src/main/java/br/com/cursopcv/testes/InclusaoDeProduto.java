@@ -11,6 +11,8 @@ public class InclusaoDeProduto {
 
         Produto prop = new Produto();
 
+        //Salvando produto
+
         prop.setNome("Panela");
         prop.setDescricao("Panela de Pressão 10 Litros");
         prop.setPreco(56.80);

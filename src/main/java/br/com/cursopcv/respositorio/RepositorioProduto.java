@@ -39,11 +39,11 @@ public class RepositorioProduto {
         return produto;
     }
     
-    public Produto consultarPorId(Long id) {
+    public Produto obterPorCod(Long cod) {
     	EntityManager em = emf.createEntityManager();
     	Produto produto = null;
     	try {
-    		produto = em.find(Produto.class, id);
+    		produto = em.find(Produto.class, cod);
     	} finally {
     		em.close();
     	}
@@ -73,9 +73,9 @@ public class RepositorioProduto {
         return produto;
     }
     
-    public void remover(Long id) {
+    public void removerPorCod(Long cod) {
     	EntityManager em = emf.createEntityManager();
-    	Produto produto = em.find(Produto.class, id);
+    	Produto produto = em.find(Produto.class, cod);
     	try {
     		em.getTransaction().begin();
     		if (produto != null) {
@@ -85,6 +85,17 @@ public class RepositorioProduto {
     	} finally {
     		em.close();
     	}
+    }
+    
+    public void removerPorObjeto(Produto produto) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            em.remove(em.contains(produto) ? produto : em.merge(produto));
+            em.getTransaction().commit();
+        } finally {
+            em.close();
+        }
     }
     
     public void fecharEntityManagerFactory() {

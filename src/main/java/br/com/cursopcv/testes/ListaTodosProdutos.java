@@ -14,7 +14,7 @@ public class ListaTodosProdutos {
 		InclusaoDeProduto.main(args);
 		
 		Long idProdutoParaConsultar = 3L;
-        Produto produtoConsultado = repProduto.consultarPorId(idProdutoParaConsultar);
+        Produto produtoConsultado = repProduto.obterPorCod(idProdutoParaConsultar);
         
         if (produtoConsultado != null) {
             System.out.printf("Produto encontrado por ID %d: ", produtoConsultado.getCod());
